@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.cotopaxi.com/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+notes: >-
+  Derived from the live OIDC/OAuth authorization-server discovery documents for
+  the Cotopaxi Shopify shop. This is Shopify Customer Accounts OAuth2/OIDC; there
+  is no first-party Cotopaxi developer API. Endpoints are served from
+  account.cotopaxi.com under the shared Shopify issuer.
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode]
+  pkce: true
+  pkce_methods: [S256]
+  token_endpoint_auth_methods: [client_secret_basic]
+schemes:
+- name: ShopifyCustomerAccountsOIDC
+  type: openIdConnect
+  openIdConnectUrl: https://www.cotopaxi.com/.well-known/openid-configuration
+  issuer: https://shopify.com/authentication/2817544
+  id_token_signing_alg: [RS256]
+  claims_supported: [iss, sub, aud, exp, iat, nonce, sid, email, email_verified]
+  sources: [well-known/cotopaxi-openid-configuration.json]
+- name: ShopifyCustomerAccountsOAuth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://account.cotopaxi.com/authentication/oauth/authorize
+    tokenUrl: https://account.cotopaxi.com/authentication/oauth/token
+    end_session_endpoint: https://account.cotopaxi.com/authentication/logout
+    grant_types: [authorization_code, refresh_token, 'urn:ietf:params:oauth:grant-type:jwt-bearer']
+    scopes: [openid, email, 'customer-account-api:full', 'customer-account-mcp-api:full']
+  sources: [well-known/cotopaxi-oauth-authorization-server.json]
