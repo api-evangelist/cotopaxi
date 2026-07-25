@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.cotopaxi.com/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+notes: >-
+  OAuth scopes advertised by the Cotopaxi Shopify Customer Accounts
+  authorization server (scopes_supported in the live discovery documents).
+schemes:
+- name: ShopifyCustomerAccountsOAuth2
+  source: well-known/cotopaxi-oauth-authorization-server.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://account.cotopaxi.com/authentication/oauth/authorize
+    tokenUrl: https://account.cotopaxi.com/authentication/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; returns an ID token for the customer.
+  flows: [authorizationCode]
+- scope: email
+  description: Access to the customer's email address and email_verified claim.
+  flows: [authorizationCode]
+- scope: 'customer-account-api:full'
+  description: Full access to the Shopify Customer Account API for the signed-in customer (orders, profile, addresses).
+  flows: [authorizationCode]
+- scope: 'customer-account-mcp-api:full'
+  description: Full access to the authenticated Customer Account MCP API for the signed-in customer.
+  flows: [authorizationCode]

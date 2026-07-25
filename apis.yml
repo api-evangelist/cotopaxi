@@ -1,8 +1,24 @@
 aid: cotopaxi
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cotopaxi.png
 name: Cotopaxi
-description: 'Cotopaxi is a company surfaced as a portfolio company of forerunner-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Cotopaxi is a Certified B Corporation outdoor gear and apparel brand (backpacks, jackets,
+  and accessories) known for its "Do Good" mission and Gear for Good model. It sells direct-to-consumer
+  on a Shopify storefront at cotopaxi.com. Cotopaxi publishes no first-party developer API, but its
+  Shopify platform exposes real machine surfaces: OAuth2/OIDC customer authentication (Shopify Customer
+  Accounts) at account.cotopaxi.com, a hosted Storefront MCP server at /api/mcp, and an authenticated
+  Customer Account MCP API. Surfaced as a portfolio company of Forerunner Ventures.'
 url: https://raw.githubusercontent.com/api-evangelist/cotopaxi/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +28,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Consumer
+- Outdoor
+- Apparel
+- Ecommerce
+- Retail
+- Shopify
+- MCP
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +45,31 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/cotopaxi-domain-security.yml
 - type: Website
   url: https://www.cotopaxi.com
+- type: MCPServer
+  name: Cotopaxi Storefront MCP
+  url: mcp/cotopaxi-mcp.yml
+- type: WellKnown
+  url: well-known/cotopaxi-well-known.yml
+- type: Authentication
+  url: authentication/cotopaxi-authentication.yml
+- type: OAuthScopes
+  url: scopes/cotopaxi-scopes.yml
+- type: Conformance
+  url: conformance/cotopaxi-conformance.yml
+- type: Support
+  url: https://help.cotopaxi.com
+- type: PrivacyPolicy
+  url: https://www.cotopaxi.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://www.cotopaxi.com/policies/terms-of-service
+- type: SignUp
+  url: https://account.cotopaxi.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

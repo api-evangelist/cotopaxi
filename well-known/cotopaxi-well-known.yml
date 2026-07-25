@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of https://www.cotopaxi.com/.well-known/*
+host: https://www.cotopaxi.com
+notes: >-
+  Cotopaxi runs on Shopify. The OAuth/OIDC discovery documents describe Shopify
+  Customer Accounts for this shop (issuer https://shopify.com/authentication/2817544),
+  with the customer-facing endpoints served from account.cotopaxi.com.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: cotopaxi-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: cotopaxi-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

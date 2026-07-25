@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.cotopaxi.com/.well-known/openid-configuration
+notes: >-
+  Standards conformance evidenced by the live Shopify Customer Accounts
+  discovery documents for the Cotopaxi shop. Cotopaxi publishes no first-party
+  API spec; these assertions cover the storefront auth/commerce surface only.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: RFC 8414 authorization-server metadata served at /.well-known/oauth-authorization-server
+- id: oidc
+  conforms: true
+  evidence: OpenID Connect discovery served at /.well-known/openid-configuration (RS256 id_token, code flow)
+- id: oauth2-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported=[S256]
+- id: rfc8414-as-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200 with issuer/token/authorization endpoints
+- id: mcp
+  conforms: true
+  evidence: hosted Storefront MCP server responds to JSON-RPC tools/list at /api/mcp (5 tools)

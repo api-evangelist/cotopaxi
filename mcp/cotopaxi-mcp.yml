@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://www.cotopaxi.com/api/mcp
+notes: >-
+  Cotopaxi exposes Shopify's hosted Storefront MCP server. A live JSON-RPC
+  tools/list against https://www.cotopaxi.com/api/mcp returned 200 with 5 tools
+  (captured verbatim in cotopaxi-storefront-mcp-tools.json). A second Shopify MCP
+  surface — the authenticated Customer Account MCP — is advertised via the
+  customer-account-mcp-api:full OAuth scope (see well-known/ and scopes/) and
+  responds 200 at https://account.cotopaxi.com/customer/api/mcp.
+server:
+  name: cotopaxi-storefront
+  transport: http
+  url: https://www.cotopaxi.com/api/mcp
+  auth: none
+tools:
+- name: search_catalog
+  description: Search for products from the online store, hosted on Shopify.
+- name: get_cart
+  description: Get the cart including items, shipping options, discount info, and checkout url.
+- name: update_cart
+  description: Perform updates to a cart, including adding/removing/updating line items and buyer identity.
+- name: search_shop_policies_and_faqs
+  description: Get facts about the store's policies, products, or services.
+- name: get_product_details
+  description: Look up a product by ID; pass options to select a specific variant.
+related_servers:
+- name: cotopaxi-customer-account
+  transport: http
+  url: https://account.cotopaxi.com/customer/api/mcp
+  auth: oauth2
+  scope: customer-account-mcp-api:full
+  status: published
+  note: Authenticated Shopify Customer Account MCP; requires customer OAuth token.
