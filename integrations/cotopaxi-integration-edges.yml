@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/cotopaxi/integrations
+- https://n8n.io/integrations/cotopaxi/
+- https://composio.dev/toolkits/cotopaxi
+- https://monid.ai/tools/cotopaxi
+checked:
+- https://composio.dev/toolkits/cotopaxi
+- https://monid.ai/tools/cotopaxi
+- https://n8n.io/integrations/cotopaxi/
+- https://zapier.com/apps/cotopaxi/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
