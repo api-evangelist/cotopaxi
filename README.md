@@ -64,6 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Cotopaxi is a company surfaced as a portfolio company of forerunner-ventures and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+Cotopaxi is a Certified B Corporation outdoor gear and apparel brand (backpacks, jackets, and accessories) known for its "Do Good" mission and Gear for Good model. It sells direct-to-consumer on a Shopify storefront at cotopaxi.com. Cotopaxi publishes no first-party developer API, but its Shopify platform exposes real machine surfaces: OAuth2/OIDC customer authentication (Shopify Customer Accounts) at account.cotopaxi.com, a hosted Storefront MCP server at /api/mcp, and an authenticated Customer Account MCP API. Surfaced as a portfolio company of Forerunner Ventures.
 
-Backed by: forerunner-ventures — https://www.cotopaxi.com
+**Areas:** Company · Consumer · Outdoor · Apparel · E-Commerce · Retail · Shopify · MCP
+
+## Cotopaxi on APIs.io
+
+Everything profiled for Cotopaxi is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cotopaxi/](https://apis.io/providers/cotopaxi/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [cotopaxi-storefront](https://apis.io/servers/cotopaxi/cotopaxi-storefront/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Cotopaxi Authentication](https://apis.io/security/cotopaxi/cotopaxi-authentication/)
+- [Cotopaxi Domain Security](https://apis.io/security/cotopaxi/cotopaxi-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Cotopaxi Scopes](https://apis.io/scopes/cotopaxi/cotopaxi-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.cotopaxi.com)
+- [Sign up](https://account.cotopaxi.com)
+- [Support](https://help.cotopaxi.com)
+- [Terms of service](https://www.cotopaxi.com/policies/terms-of-service)
+- [Privacy policy](https://www.cotopaxi.com/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 20.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 51.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 34.2 |
+
+**Agent readiness 12.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cotopaxi/](https://apis.io/providers/cotopaxi/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cotopaxi: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cotopaxi/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
